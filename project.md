@@ -19,43 +19,43 @@ In this project we will enhance our **Tooling Website** solution by adding a Loa
 3. Install Apache Load Balancer on Project-8-apache-lb server and configure it to point traffic coming to LB to both Web Servers:
 
 
-`#Install apache2
-`
-
-`
-sudo apt update`
-
-
-`
-sudo apt install apache2 -y`
-
-`
-sudo apt-get install libxml2-dev`
+```#Install apache2
 
 
 
-`#Enable following modules: `
-
-`
-sudo a2enmod rewrite`
-
-`sudo a2enmod proxy`
+sudo apt update
 
 
-`sudo a2enmod proxy_balancer`
+
+sudo apt install apache2 -y
 
 
-`sudo a2enmod proxy_http`
-
-`sudo a2enmod headers`
-
-`sudo a2enmod lbmethod_bytraffic`
+sudo apt-get install libxml2-dev
 
 
-`#Restart apache2 service`
 
-`sudo systemctl restart apache`
+#Enable following modules: 
 
+
+sudo a2enmod rewrite
+
+sudo a2enmod proxy
+
+
+sudo a2enmod proxy_balancer
+
+
+sudo a2enmod proxy_http
+
+sudo a2enmod headers
+
+sudo a2enmod lbmethod_bytraffic
+
+
+#Restart apache2 service
+
+sudo systemctl restart apache
+```
 make sure apache2 is up and running 
 
 `sudo systemctl status apache2`
